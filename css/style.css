@@ -168,8 +168,12 @@ body {
     align-items: center;
     margin-bottom: 2rem;
   }
+  .project{
+    display: flex;
+    flex-direction: column;
+  }
   .projects img {
-    max-width: 100%;
+    max-width: 50%;
     border-radius: 10px;
   }
   .projects .project-details {
@@ -322,3 +326,78 @@ body {
   .job>h4{
     font-size: 24px;
   }
+
+
+  /* Hamburger Menu Icon */
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    color: #ccd6f6;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    nav {
+      flex-wrap: wrap;
+      position: relative;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #000;
+      display: none;
+      text-align: center;
+      gap: 1.5rem;
+      padding: 1rem 0;
+      z-index: 1000;
+    }
+  
+    nav ul.show {
+      display: flex;
+    }
+  
+    nav ul li {
+      padding: 0.5rem 0;
+    }
+  
+    body {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  
+    .about {
+      width: 100%;
+    }
+  
+    .intro h1 {
+      font-size: 42px;
+    }
+  
+    .intro h2 {
+      font-size: 32px;
+    }
+  
+    .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: 20px;
+    }
+  
+    .social-links {
+      left: 10px;
+    }
+  
+    .email-wrapper {
+      right: 10px;
+    }
+  }
+  
