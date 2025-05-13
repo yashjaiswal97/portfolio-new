@@ -6,18 +6,28 @@
   <title>Yash Jaiswal - Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
 </head>
 <body>
   <header>
+  
+      
     <nav>
-      <div class="logo">Y</div>
-      <ul>
-        <li><a class="NavBtn" href="#">Home</a></li>
-        <li><a class="NavBtn" href="#experience">Experience</a></li>
-        <li><a class="NavBtn" href="#projects">Projects</a></li>
-        <li><a class="NavBtn" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+        <div class="logo">Y</div>
+      
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+      
+        <ul id="nav-menu">
+          <li><a class="NavBtn" href="#home">Home</a></li>
+          <li><a class="NavBtn" href="#experience">Experience</a></li>
+          <li><a class="NavBtn" href="#skills">Skills</a></li>
+          <li><a class="NavBtn" href="#projects">Projects</a></li>
+          <li><a class="NavBtn" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     <section class="intro">
       <p class="hello">Hi, my name is</p>
       <h1>Yash Jaiswal,</h1>
@@ -131,13 +141,33 @@
   <section id="projects" class="projects">
     <h3>Things I’ve worked on</h3>
     <div class="project">
-      <img src="project1.jpg" alt="Media Management Platform">
+      <div>
+        <img src="img/weather.jpg" alt="Real Time Weather App">
+      </div>
+      
       <div class="project-details">
-        <h4>Media Management Platform</h4>
+        <h4>Real Time Weather App</h4>
         <p>This platform was developed to assist in the organization of media assets...</p>
       </div>
     </div>
     <!-- Additional projects -->
+    <div class="project">
+        <img src="img/movie.jpg" alt="Movie Explorer">
+        <div class="project-details">
+          <h4>Movie Explorer</h4>
+          <p>This platform was developed to assist in the organization of media assets...</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="img/banking.jpg" alt="Banking UI App">
+        <div class="project-details">
+          <h4>Banking UI App</h4>
+          <p>This platform was developed to assist in the organization of media assets...</p>
+        </div>
+      </div>
+
+    
   </section>
 
   <section id="contact" class="contact">
@@ -189,6 +219,15 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
+  
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+  
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+  </script>
   
 </body>
 
